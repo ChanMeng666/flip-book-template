@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 import { getBookConfig } from '@/lib/config-loader';
-import { BookOpen } from 'lucide-react';
 
 interface BookCoverProps {
   type: 'front' | 'back';
@@ -23,7 +22,7 @@ export const BookCover = forwardRef<HTMLDivElement, BookCoverProps>(
           <div className="absolute inset-8 border border-amber-200/20 rounded-lg pointer-events-none" />
 
           {/* 书籍图标 */}
-          <BookOpen className="w-16 h-16 mb-6 opacity-80" />
+          <img src={`${import.meta.env.BASE_URL}flip-book-icon.svg`} alt="logo" className="w-16 h-16 mb-6 opacity-90" />
 
           {/* 标题 */}
           <h1 className="book-cover-title font-serif">
